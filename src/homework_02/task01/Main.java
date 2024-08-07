@@ -37,30 +37,29 @@ public class Main {
     }
   }
 
-  public static int getMaxID(ProductRepository productRepository) {
-    return productRepository.findAll().stream().mapToInt(p -> Math.toIntExact(
-            p.getId()))
+  public static long getMaxID(ProductRepository productRepository) {
+    return productRepository.findAll().stream().mapToLong(p -> p.getId())
         .max()
         .orElseThrow(() ->
             new IllegalArgumentException("The list is empty"));
   }
 
-  //  public static Map<Long, Product> findProductsBySubstring(List<Product> products,
-//      String substring) {
-//    return products.stream()
-//        .filter(p -> p.getTitle().toLowerCase().contains(substring.toLowerCase()))
-//        .collect(Collectors.toMap(p -> p.getId(), p -> p));
-//  }
-  public static Map<Long, Product> findProductsBySubstring(List<Product> products,
+    public static Map<Long, Product> findProductsBySubstring(List<Product> products,
       String substring) {
-    Map<Long, Product> resultMap = new HashMap<>();
-    for (Product p : products) {
-      if (p.getTitle().toLowerCase().contains(substring.toLowerCase())) {
-        resultMap.put(p.getId(), p);
-      }
-    }
-    return resultMap;
+    return products.stream()
+        .filter(p -> p.getTitle().toLowerCase().contains(substring.toLowerCase()))
+        .collect(Collectors.toMap(p -> p.getId(), p -> p));
   }
+//  public static Map<Long, Product> findProductsBySubstring(List<Product> products,
+//      String substring) {
+//    Map<Long, Product> resultMap = new HashMap<>();
+//    for (Product p : products) {
+//      if (p.getTitle().toLowerCase().contains(substring.toLowerCase())) {
+//        resultMap.put(p.getId(), p);
+//      }
+//    }
+//    return resultMap;
+//  }
 
   public static void main(String[] args) {
     ProductRepositoryImpl productRepository = new ProductRepositoryImpl();
@@ -92,7 +91,7 @@ public class Main {
 //      System.out.println("Product not found with id: " + id);
 //    }
 // Поиск наибольшего id
-    int maxID = getMaxID(productRepository);
+    long maxID = getMaxID(productRepository);
     System.out.println("Max ID from the products is: " + maxID);
 
 // Поиск продуктов по подстроке, введенной пользователем
