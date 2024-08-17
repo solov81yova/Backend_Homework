@@ -11,6 +11,7 @@
         <module name="car_service" />
         <module name="car_service (1)" />
         <module name="demo06" />
+        <module name="car_service (2)" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +19,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="car_service" options="-parameters" />
       <module name="car_service (1)" options="-parameters" />
+      <module name="car_service (2)" options="-parameters" />
       <module name="demo06" options="-parameters" />
       <module name="user_service" options="-parameters" />
     </option>
