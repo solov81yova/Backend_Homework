@@ -8,10 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="user_service" />
-        <module name="car_service" />
         <module name="car_service (1)" />
-        <module name="demo06" />
         <module name="car_service (2)" />
+        <module name="user_service (1)" />
+        <module name="car_service (3)" />
+        <module name="car_service" />
+        <module name="demo06" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,8 +22,10 @@
       <module name="car_service" options="-parameters" />
       <module name="car_service (1)" options="-parameters" />
       <module name="car_service (2)" options="-parameters" />
+      <module name="car_service (3)" options="-parameters" />
       <module name="demo06" options="-parameters" />
       <module name="user_service" options="-parameters" />
+      <module name="user_service (1)" options="-parameters" />
     </option>
   </component>
 </project>
