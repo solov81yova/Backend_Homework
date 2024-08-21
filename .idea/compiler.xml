@@ -12,6 +12,7 @@
         <module name="car_service (2)" />
         <module name="user_service (1)" />
         <module name="car_service (3)" />
+        <module name="car_service (4)" />
         <module name="car_service" />
         <module name="demo06" />
       </profile>
@@ -23,6 +24,7 @@
       <module name="car_service (1)" options="-parameters" />
       <module name="car_service (2)" options="-parameters" />
       <module name="car_service (3)" options="-parameters" />
+      <module name="car_service (4)" options="-parameters" />
       <module name="demo06" options="-parameters" />
       <module name="user_service" options="-parameters" />
       <module name="user_service (1)" options="-parameters" />
